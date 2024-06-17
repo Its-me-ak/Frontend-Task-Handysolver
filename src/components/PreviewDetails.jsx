@@ -6,7 +6,7 @@ const PreviewDetails = () => {
     const selectedJob = jobs.find(job => job.id === selectedJobId);
     if (!selectedJob) {
         return (
-            <div className='p-4 w-full bg-white px-14'>
+            <div className='p-4 w-full bg-white lg:px-14 px-4'>
                 <h2 className="text-2xl font-bold mb-4">Job Preview Details</h2>
                 <div className="">Select or create a job to see the preview.</div>
             </div>
@@ -14,7 +14,7 @@ const PreviewDetails = () => {
     }
 
     return (
-        <div className="p-4 w-full border bg-white px-14">
+        <div className="p-4 w-full border bg-white lg:px-14 px-4">
             <h2 className="text-2xl font-bold mb-4">Job Preview Details</h2>
             <div className='flex justify-between mt-8'>
                 {selectedJob.showTitle && (

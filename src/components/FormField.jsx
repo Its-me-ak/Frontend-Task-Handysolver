@@ -93,9 +93,9 @@ const FormField = () => {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="mb-4 w-full flex justify-between items-center">
+                        <div className="mb-4 w-full flex justify-between lg:items-center items-start lg:flex-row flex-col">
                             <label className="text-sm font-bold mb-2 inline-block">Experience Range (yrs)</label>
-                            <div className='flex gap-4'>
+                            <div className='flex gap-4 lg:justify-start justify-between lg:w-auto w-full'>
                                 <Select
                                     className="basic-single w-32"
                                     classNamePrefix="select"
@@ -234,7 +234,6 @@ const FormField = () => {
                         </div>
                     </div>
                     <div className='flex justify-end pt-2'>
-                        <button type="submit" className=" text-[#e93736] border-2 border-[#e93736] px-4 py-1 rounded me-3 font-semibold">Cancel</button>
                         <button type="submit" className="bg-blue-500 text-white px-4 py-1 rounded font-semibold">Proceed</button>
                     </div>
                 </form>

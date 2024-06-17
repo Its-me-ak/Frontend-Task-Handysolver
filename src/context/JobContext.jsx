@@ -137,7 +137,7 @@ export const JobProvider = ({children}) => {
                 handleSelectJob,
                 handleDuplicateJob,
                 handleDeleteJob,
-                handleSaveJob,
+                handleSaveJob
             }}
         >
             {children}
