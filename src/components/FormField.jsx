@@ -20,6 +20,7 @@ const FormField = () => {
         setFormState((prevState) => ({
             ...prevState,
             [name]: type === 'checkbox' ? checked : value,
+            
         }));
     };
 
@@ -30,11 +31,31 @@ const FormField = () => {
         }));
     };
 
+    const isFormEmpty = () => {
+        return (
+            !formState.title &&
+            !formState.introduction &&
+            !formState.roles &&
+            !formState.experienceMin &&
+            !formState.experienceMax &&
+            !formState.qualification &&
+            !formState.salaryRange &&
+            !formState.jobDescription &&
+            !formState.company &&
+            !formState.location &&
+            !formState.jobType &&
+            !formState.jobDay
+        );
+    };
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        handleSaveJob(formState)
-    }
+        e.preventDefault();
+        if (isFormEmpty(formState)) {
+            alert("All fields are empty! Please fill out at least one field to see the preview detail.");
+            return;
+        }
+        handleSaveJob(formState);
+    };
 
     return (
         <>
